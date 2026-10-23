@@ -1,0 +1,246 @@
+[
+  {
+    "name": "HassClimateSetTemperature",
+    "description": "Sets the desired indoor temperature. Triggered by: adjust, change, decrease, increase, make, set, turn down, turn, turn up. Examples: set the office thermostat to 20 degrees.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": [
+            "Overhead Light",
+            "Play Corner",
+            "Thermostat",
+            "Curtain Left",
+            "Front Door",
+            "Main Valve"
+          ],
+          "description": "Name of a device or entity"
+        },
+        "temperature": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Temperature in degrees"
+        }
+      },
+      "required": [
+        "name",
+        "temperature"
+      ]
+    }
+  },
+  {
+    "name": "HassLightSet",
+    "description": "Sets the brightness or color of a light. Triggered by: change, set, decrease, increase, make, turn down, turn up, turn, change brightness, decrease brightness, increase brightness, brightness of. Examples: set the bedroom lamp brightness to 50%.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "brightness": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            {
+              "type": "string",
+              "enum": [
+                "highest",
+                "max",
+                "maximum",
+                "lowest",
+                "min",
+                "minimum"
+              ]
+            }
+          ],
+          "description": "Brightness percentage from 0 to 100"
+        },
+        "name": {
+          "type": "string",
+          "enum": [
+            "Overhead Light",
+            "Play Corner",
+            "Thermostat",
+            "Curtain Left",
+            "Front Door",
+            "Main Valve"
+          ],
+          "description": "Name of a device or entity"
+        }
+      },
+      "required": [
+        "brightness",
+        "name"
+      ]
+    }
+  },
+  {
+    "name": "HassMediaNext",
+    "description": "Skips a media player to the next item. Triggered by: skip song, skip track, next, next for, next item, next on, next track, skip, skip on, skip this. Examples: next track on the TV.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": [
+            "Overhead Light",
+            "Play Corner",
+            "Thermostat",
+            "Curtain Left",
+            "Front Door",
+            "Main Valve"
+          ],
+          "description": "Name of a device or entity"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  },
+  {
+    "name": "HassMediaPause",
+    "description": "Pauses a media player. Triggered by: pause. Examples: pause the TV.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": [
+            "Overhead Light",
+            "Play Corner",
+            "Thermostat",
+            "Curtain Left",
+            "Front Door",
+            "Main Valve"
+          ],
+          "description": "Name of a device or entity"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  },
+  {
+    "name": "HassMediaUnpause",
+    "description": "Unpauses a media player. Triggered by: resume, unpause. Examples: resume the TV.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": [
+            "Overhead Light",
+            "Play Corner",
+            "Thermostat",
+            "Curtain Left",
+            "Front Door",
+            "Main Valve"
+          ],
+          "description": "Name of a device or entity"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  },
+  {
+    "name": "HassSetVolume",
+    "description": "Sets the volume of a media player. Triggered by: turn, change, decrease, increase, make, set, turn down, turn up. Examples: set the TV volume to 90 percent.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": [
+            "Overhead Light",
+            "Play Corner",
+            "Thermostat",
+            "Curtain Left",
+            "Front Door",
+            "Main Valve"
+          ],
+          "description": "Name of a device or entity"
+        },
+        "volume_level": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Volume level from 0 to 100"
+        }
+      },
+      "required": [
+        "name",
+        "volume_level"
+      ]
+    }
+  },
+  {
+    "name": "HassTurnOff",
+    "description": "Turns off a device or entity. Triggered by: deactivate, change off, bring, change, close, switch off, bring off, close down, close up, turn off, lower down, unlock. Examples: turn off the overhead light in the kitchen; turn off the play corner lights in the kitchen; close the curtain left in the living room; close the main valve in the kitchen; unlock the front door in the kitchen; turn off the overhead light; turn off the play corner lights; close the sliding door.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "area": {
+          "type": "string",
+          "enum": [
+            "Kitchen",
+            "Living Room"
+          ],
+          "description": "Name of an area"
+        },
+        "name": {
+          "type": "string",
+          "enum": [
+            "Overhead Light",
+            "Play Corner",
+            "Thermostat",
+            "Curtain Left",
+            "Front Door",
+            "Main Valve"
+          ],
+          "description": "Name of a device or entity"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  },
+  {
+    "name": "HassTurnOn",
+    "description": "Turns on a device or entity. Triggered by: activate, change on, light up, bring, change, switch on, bring on, lift, lift up, open up, turn on, open. Examples: turn on the overhead light in the kitchen; turn on the play corner lights in the kitchen; open the curtain left in the living room; open the main valve in the kitchen; lock the front door in the kitchen; turn on the overhead light; turn on the play corner lights; open the sliding door.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "area": {
+          "type": "string",
+          "enum": [
+            "Kitchen",
+            "Living Room"
+          ],
+          "description": "Name of an area"
+        },
+        "name": {
+          "type": "string",
+          "enum": [
+            "Overhead Light",
+            "Play Corner",
+            "Thermostat",
+            "Curtain Left",
+            "Front Door",
+            "Main Valve"
+          ],
+          "description": "Name of a device or entity"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  }
+]

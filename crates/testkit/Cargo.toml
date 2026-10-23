@@ -1,0 +1,19 @@
+[package]
+name = "rustyneedle-testkit"
+description = "Shared helpers for the rustyneedle test suites."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+authors.workspace = true
+keywords.workspace = true
+categories.workspace = true
+rust-version.workspace = true
+readme = "../../README.md"
+publish = false
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+cact.workspace = true

@@ -1,0 +1,17 @@
+[package]
+name = "rustyneedle-tokenizer"
+description = "SentencePiece BPE tokenizer read directly from a .cact archive. Internal crate of rustyneedle."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+authors.workspace = true
+keywords.workspace = true
+categories.workspace = true
+rust-version.workspace = true
+readme = "../../README.md"
+
+[dev-dependencies]
+testkit.workspace = true
+serde.workspace = true

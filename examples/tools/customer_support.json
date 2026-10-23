@@ -1,0 +1,84 @@
+[
+  {
+    "name": "look_up_order",
+    "description": "Find an order and report its status.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "order_id": {
+          "type": "string",
+          "description": "The order number exactly as the customer gave it."
+        }
+      },
+      "required": [
+        "order_id"
+      ]
+    }
+  },
+  {
+    "name": "start_refund",
+    "description": "Start a refund for an order.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "order_id": {
+          "type": "string",
+          "description": "The order number exactly as the customer gave it."
+        },
+        "reason": {
+          "type": "string",
+          "description": "Why the customer wants a refund.",
+          "enum": [
+            "damaged",
+            "wrong_item",
+            "late",
+            "changed_mind",
+            "other"
+          ]
+        }
+      },
+      "required": [
+        "order_id",
+        "reason"
+      ]
+    }
+  },
+  {
+    "name": "update_address",
+    "description": "Change the delivery address of an order that has not shipped.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "order_id": {
+          "type": "string",
+          "description": "The order number exactly as the customer gave it."
+        },
+        "address": {
+          "type": "string",
+          "description": "The new address exactly as the customer said it."
+        }
+      },
+      "required": [
+        "order_id",
+        "address"
+      ]
+    }
+  },
+  {
+    "name": "talk_to_human",
+    "description": "Hand the conversation to a human agent. Use whenever the customer asks to speak to a person, an agent or a human.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "topic": {
+          "type": "string",
+          "description": "What the customer wants help with, in a few words."
+        }
+      },
+      "required": []
+    },
+    "triggers": [
+      "\\b(?:human|person|agent|representative)\\b"
+    ]
+  }
+]

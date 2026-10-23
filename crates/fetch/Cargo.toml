@@ -1,0 +1,16 @@
+[package]
+name = "rustyneedle-fetch"
+description = "Download Needle and Whistle archives from Hugging Face. Internal crate of rustyneedle."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+authors.workspace = true
+keywords.workspace = true
+categories.workspace = true
+rust-version.workspace = true
+readme = "../../README.md"
+
+[dependencies]
+ureq.workspace = true

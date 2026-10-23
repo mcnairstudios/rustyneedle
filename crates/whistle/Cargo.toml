@@ -1,0 +1,23 @@
+[package]
+name = "rustyneedle-whistle"
+description = "Whistle speech-to-text: log-mel frontend, conv stem, encoder, cross-attention decoder, timestamps and streaming. Internal crate of rustyneedle."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+authors.workspace = true
+keywords.workspace = true
+categories.workspace = true
+rust-version.workspace = true
+readme = "../../README.md"
+
+[dependencies]
+cact.workspace = true
+kernels.workspace = true
+model.workspace = true
+tokenizer.workspace = true
+
+[dev-dependencies]
+testkit.workspace = true
+serde.workspace = true

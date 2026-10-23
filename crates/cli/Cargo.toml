@@ -1,0 +1,28 @@
+[package]
+name = "rustyneedle-cli"
+description = "The rustyneedle command line: complete, extract, embed, transcribe, stream, intent, download and playground."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+authors.workspace = true
+keywords.workspace = true
+categories.workspace = true
+rust-version.workspace = true
+readme = "../../README.md"
+
+[[bin]]
+name = "rustyneedle"
+path = "src/main.rs"
+
+[dependencies]
+cact.workspace = true
+fetch.workspace = true
+intent.workspace = true
+model.workspace = true
+needle.workspace = true
+playground.workspace = true
+whistle.workspace = true
+serde_json.workspace = true
+clap.workspace = true

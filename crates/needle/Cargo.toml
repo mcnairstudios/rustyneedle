@@ -1,0 +1,26 @@
+[package]
+name = "rustyneedle-needle"
+description = "Tool-calling agent, structured extraction and embeddings on top of the Needle 3 model. Internal crate of rustyneedle."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+authors.workspace = true
+keywords.workspace = true
+categories.workspace = true
+rust-version.workspace = true
+readme = "../../README.md"
+
+[dependencies]
+generate.workspace = true
+model.workspace = true
+repair.workspace = true
+serde_json.workspace = true
+fancy-regex.workspace = true
+chrono.workspace = true
+
+[dev-dependencies]
+repair.workspace = true
+testkit.workspace = true
+serde.workspace = true

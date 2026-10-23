@@ -1,0 +1,38 @@
+[package]
+name = "rustyneedle"
+description = "Pure-Rust runtime for Cactus Needle 3 and Whistle: on-device tool calling, structured extraction, embeddings and speech-to-intent."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+authors.workspace = true
+keywords.workspace = true
+categories.workspace = true
+rust-version.workspace = true
+readme = "../../README.md"
+
+[features]
+default = []
+speech = ["dep:whistle", "dep:intent"]
+download = ["dep:fetch"]
+
+[dependencies]
+model.workspace = true
+needle.workspace = true
+repair.workspace = true
+whistle = { workspace = true, optional = true }
+intent = { workspace = true, optional = true }
+fetch = { workspace = true, optional = true }
+
+[dev-dependencies]
+serde_json.workspace = true
+testkit.workspace = true
+
+[[example]]
+name = "speech"
+required-features = ["speech"]
+
+[[example]]
+name = "download"
+required-features = ["download"]

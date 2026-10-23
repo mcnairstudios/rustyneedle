@@ -1,0 +1,44 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.87"
+license = "Apache-2.0"
+repository = "https://github.com/mcnairstudios/rustyneedle"
+homepage = "https://github.com/mcnairstudios/rustyneedle"
+authors = ["rustyneedle contributors"]
+keywords = ["tool-calling", "on-device", "speech", "llm", "inference"]
+categories = ["science", "multimedia::audio"]
+
+[workspace.dependencies]
+cact = { package = "rustyneedle-cact", path = "crates/cact", version = "0.1.0" }
+kernels = { package = "rustyneedle-kernels", path = "crates/kernels", version = "0.1.0" }
+tokenizer = { package = "rustyneedle-tokenizer", path = "crates/tokenizer", version = "0.1.0" }
+grammar = { package = "rustyneedle-grammar", path = "crates/grammar", version = "0.1.0" }
+model = { package = "rustyneedle-model", path = "crates/model", version = "0.1.0" }
+generate = { package = "rustyneedle-generate", path = "crates/generate", version = "0.1.0" }
+repair = { package = "rustyneedle-repair", path = "crates/repair", version = "0.1.0" }
+needle = { package = "rustyneedle-needle", path = "crates/needle", version = "0.1.0" }
+whistle = { package = "rustyneedle-whistle", path = "crates/whistle", version = "0.1.0" }
+intent = { package = "rustyneedle-intent", path = "crates/intent", version = "0.1.0" }
+fetch = { package = "rustyneedle-fetch", path = "crates/fetch", version = "0.1.0" }
+playground = { package = "rustyneedle-playground", path = "crates/playground", version = "0.1.0" }
+testkit = { package = "rustyneedle-testkit", path = "crates/testkit" }
+envs = { package = "rustyneedle-envs", path = "crates/envs" }
+memmap2 = "0.9"
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+clap = { version = "4", features = ["derive"] }
+fancy-regex = "0.14"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+tiny_http = "0.12"
+ureq = "2"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"

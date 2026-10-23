@@ -1,0 +1,23 @@
+[package]
+name = "rustyneedle-intent"
+description = "Speech to tool call in one step: Whistle transcription feeding a Needle agent. Internal crate of rustyneedle."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+authors.workspace = true
+keywords.workspace = true
+categories.workspace = true
+rust-version.workspace = true
+readme = "../../README.md"
+
+[dependencies]
+needle.workspace = true
+whistle.workspace = true
+serde_json.workspace = true
+
+[dev-dependencies]
+testkit.workspace = true
+model.workspace = true
+serde.workspace = true

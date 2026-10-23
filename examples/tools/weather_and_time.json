@@ -1,0 +1,42 @@
+[
+  {
+    "name": "get_weather",
+    "description": "Get the current weather or a forecast for a city. Use for questions about rain, temperature or conditions. Never use this for questions about the time.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "The city name exactly as the user said it."
+        },
+        "when": {
+          "type": "string",
+          "description": "Which day the user asked about, copied exactly as said, for example today or tomorrow."
+        }
+      },
+      "required": [
+        "city"
+      ]
+    }
+  },
+  {
+    "name": "get_local_time",
+    "description": "Get the current time in a city. Use for any question like what time is it in a city. Never use this for weather.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "The city name exactly as the user said it."
+        }
+      },
+      "required": [
+        "city"
+      ]
+    },
+    "triggers": [
+      "\\bwhat(?:'s| is)? the time\\b",
+      "\\btime is it\\b"
+    ]
+  }
+]

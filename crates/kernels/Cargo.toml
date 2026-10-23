@@ -1,0 +1,20 @@
+[package]
+name = "rustyneedle-kernels"
+description = "Quantised matrix products, NEON int8 dot-product kernels, rotary, Walsh-Hadamard and attention primitives for rustyneedle. Internal crate of rustyneedle."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+authors.workspace = true
+keywords.workspace = true
+categories.workspace = true
+rust-version.workspace = true
+readme = "../../README.md"
+
+[dependencies]
+cact.workspace = true
+
+[dev-dependencies]
+testkit.workspace = true
+serde.workspace = true

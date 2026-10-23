@@ -1,0 +1,16 @@
+[package]
+name = "rustyneedle-repair"
+description = "Deterministic post-decode repair and gate rules for Needle tool calls. Internal crate of rustyneedle."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+authors.workspace = true
+keywords.workspace = true
+categories.workspace = true
+rust-version.workspace = true
+readme = "../../README.md"
+
+[dependencies]
+serde_json.workspace = true

@@ -1,0 +1,15 @@
+rustyneedle
+Copyright rustyneedle contributors
+
+This project is inspired by and compatible with Needle and Whistle by Cactus Compute
+(https://github.com/cactus-compute/needle, Apache-2.0). It reimplements the runtime that reads
+the .cact archive format and follows the behaviour of the Needle 3 and Whistle models published
+by Cactus Compute. It is an independent project and is not affiliated with or endorsed by
+Cactus Compute. The model weights are downloaded separately from Hugging Face and are subject to
+their own licence; no model weights or recordings made from them are distributed here.
+
+examples/environments/*.json hold the six tool environments and test cases of
+https://github.com/cactus-compute/needle-environments (Apache-2.0), stored as data.
+
+examples/tools/home_assistant.json is generated from English intent definitions published by the
+Open Home Foundation (home-assistant/intents, (c) Open Home Foundation, licensed CC BY 4.0).

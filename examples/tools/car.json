@@ -1,0 +1,98 @@
+[
+  {
+    "name": "set_cabin_temperature",
+    "description": "Set the target temperature for one zone of the car cabin.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "zone": {
+          "type": "string",
+          "description": "Which part of the cabin.",
+          "enum": [
+            "driver",
+            "passenger",
+            "rear",
+            "all"
+          ]
+        },
+        "celsius": {
+          "type": "integer",
+          "description": "Target temperature in degrees Celsius.",
+          "minimum": 16,
+          "maximum": 30
+        }
+      },
+      "required": [
+        "celsius"
+      ]
+    }
+  },
+  {
+    "name": "set_window",
+    "description": "Open or close a window of the car.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "window": {
+          "type": "string",
+          "description": "Which window. Use rear for both rear windows and all for every window.",
+          "enum": [
+            "driver",
+            "passenger",
+            "rear_left",
+            "rear_right",
+            "rear",
+            "all"
+          ]
+        },
+        "action": {
+          "type": "string",
+          "description": "What to do with it.",
+          "enum": [
+            "open",
+            "close"
+          ]
+        }
+      },
+      "required": [
+        "window",
+        "action"
+      ]
+    }
+  },
+  {
+    "name": "navigate_to",
+    "description": "Start navigation to a place or address. Never use this to call a person.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "destination": {
+          "type": "string",
+          "description": "The place name or address exactly as the user said it."
+        }
+      },
+      "required": [
+        "destination"
+      ]
+    }
+  },
+  {
+    "name": "call_contact",
+    "description": "Place a phone call to a person by name. Use for call, phone, ring or dial. Never use navigation for people.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The contact name exactly as the user said it."
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "triggers": [
+      "\\b(?:call|phone|ring|dial)\\b"
+    ]
+  }
+]

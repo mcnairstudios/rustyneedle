@@ -1,0 +1,22 @@
+[package]
+name = "rustyneedle-model"
+description = "Needle 3 forward pass: multi-lane routing, engram memory, int8 KV cache, probe heads and batched prefill. Internal crate of rustyneedle."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+authors.workspace = true
+keywords.workspace = true
+categories.workspace = true
+rust-version.workspace = true
+readme = "../../README.md"
+
+[dependencies]
+cact.workspace = true
+kernels.workspace = true
+tokenizer.workspace = true
+
+[dev-dependencies]
+testkit.workspace = true
+serde.workspace = true

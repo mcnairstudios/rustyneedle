@@ -1,0 +1,23 @@
+[package]
+name = "rustyneedle-playground"
+description = "Browser playground server for trying a Needle model on a tool set. Internal crate of rustyneedle."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+authors.workspace = true
+keywords.workspace = true
+categories.workspace = true
+rust-version.workspace = true
+readme = "../../README.md"
+
+[dependencies]
+model.workspace = true
+needle.workspace = true
+serde_json.workspace = true
+tiny_http.workspace = true
+
+[dev-dependencies]
+testkit.workspace = true
+ureq = { workspace = true, features = ["json"] }

@@ -1,0 +1,10 @@
+/target
+/.venv
+__pycache__
+.DS_Store
+
+/weights
+/oracle/assets
+/oracle/goldens
+/oracle/clips
+/examples/clips

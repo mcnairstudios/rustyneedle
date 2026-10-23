@@ -1,0 +1,61 @@
+[
+  {
+    "name": "create_event",
+    "description": "Add an event to the calendar. Copy the date and time words exactly as the user said them.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The event title as the user said it."
+        },
+        "when": {
+          "type": "string",
+          "description": "The date and time phrase exactly as spoken, for example tomorrow at 7 or Friday at noon."
+        },
+        "duration_minutes": {
+          "type": "integer",
+          "description": "Length of the event in minutes.",
+          "minimum": 5,
+          "maximum": 480
+        }
+      },
+      "required": [
+        "title",
+        "when"
+      ]
+    }
+  },
+  {
+    "name": "list_events",
+    "description": "List what is on the calendar for a day.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "day": {
+          "type": "string",
+          "description": "The day the user asked about, copied exactly as said, for example today or next Monday."
+        }
+      },
+      "required": [
+        "day"
+      ]
+    }
+  },
+  {
+    "name": "cancel_event",
+    "description": "Remove an event from the calendar by its title.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the event to remove, as the user said it."
+        }
+      },
+      "required": [
+        "title"
+      ]
+    }
+  }
+]
